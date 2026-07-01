@@ -29,7 +29,7 @@ export default function Metodologia() {
     <div className="section container grid" style={{ gap: 16 }}>
       <div className="card">
         <h3>Pipeline metodológico A → F</h3>
-        <div className="bd grid" style={{ gridTemplateColumns: "repeat(3,1fr)", gap: 12 }}>
+        <div className="bd grid c3" style={{ gap: 12 }}>
           {PIPE.map(([l, t, d]) => (
             <div key={l} className="kpi">
               <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
@@ -42,7 +42,7 @@ export default function Metodologia() {
         </div>
       </div>
 
-      <div className="grid" style={{ gridTemplateColumns: "1fr 1fr" }}>
+      <div className="grid c2">
         <div className="card">
           <h3>Limitações (leitura honesta)</h3>
           <div className="bd" style={{ fontSize: 13.5, lineHeight: 1.6 }}>
@@ -61,6 +61,7 @@ export default function Metodologia() {
           <div className="bd" style={{ display: "flex", flexWrap: "wrap", gap: 10 }}>
             <a className="btn" href={`/geo/distritos_${uf}.geojson`} download>⬇ distritos_{uf}.geojson</a>
             <a className="btn" href={`/geo/malha_${uf}.geojson`} download>⬇ malha_{uf}.geojson</a>
+            <a className="btn" href={`/data/votos_reais_${uf}.json`} download>⬇ votos_reais_2022_{uf}.json</a>
             <button className="btn" onClick={() => baixarCSV(`vencedores_${uf}.csv`, e.vencedores)}>⬇ vencedores_{uf}.csv</button>
             <button className="btn" onClick={() => baixarCSV(`cadeiras_partido_${uf}.csv`, e.cadeiras_partido)}>⬇ cadeiras_partido_{uf}.csv</button>
             <button className="btn" onClick={() => baixarCSV(`distritos_${uf}.csv`, e.distritos)}>⬇ distritos_{uf}.csv</button>

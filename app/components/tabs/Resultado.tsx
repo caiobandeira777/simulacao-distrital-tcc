@@ -23,9 +23,9 @@ export default function Resultado() {
 
   return (
     <div className="section container grid" style={{ gap: 16 }}>
-      <div className="grid" style={{ gridTemplateColumns: "1fr 1fr" }}>
+      <div className="grid c2">
         <div className="card">
-          <h3>
+          <h3 className="wrap">
             Composição da bancada — {uf}
             <span style={{ display: "flex", gap: 8 }}>
               <span className="seg"><button className={cen === "c1" ? "on" : ""} onClick={() => setCen("c1")}>c1 legenda</button><button className={cen === "c2" ? "on" : ""} onClick={() => setCen("c2")}>c2 nom+leg</button></span>
@@ -59,10 +59,10 @@ export default function Resultado() {
         </div>
       </div>
 
-      <div className="grid" style={{ gridTemplateColumns: "1.3fr 1fr" }}>
+      <div className="grid c2w">
         <div className="card">
           <h3>Quem entra / quem sai <span className="muted" style={{ textTransform: "none" }}>vs. eleitos reais de 2022 · cenário {cen === "c1" ? "1" : "2"}</span></h3>
-          <div className="bd grid" style={{ gridTemplateColumns: "1fr 1fr", gap: 14 }}>
+          <div className="bd grid c2" style={{ gap: 14 }}>
             <div>
               <div className="lab" style={{ color: "#37d6a0", fontSize: 11, textTransform: "uppercase", letterSpacing: ".5px", marginBottom: 6 }}>Entram ({entram.length})</div>
               {entram.length ? entram.map((x, i) => (
@@ -81,7 +81,7 @@ export default function Resultado() {
         <div className="card">
           <h3>Placar de fidelidade <span className="muted" style={{ textTransform: "none" }}>eleitos reais que permanecem</span></h3>
           <div className="bd">
-            <div className="grid" style={{ gridTemplateColumns: "repeat(3,1fr)", gap: 10 }}>
+            <div className="grid c3" style={{ gap: 10 }}>
               {UFS.map((u) => {
                 const st = RESULTADOS[u];
                 const cur = u === uf;

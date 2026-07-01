@@ -18,7 +18,7 @@ export default function Distritos() {
 
   return (
     <div className="section container grid" style={{ gap: 16 }}>
-      <div className="grid" style={{ gridTemplateColumns: "1.4fr 1fr" }}>
+      <div className="grid c2w">
         <div className="card">
           <h3>
             Do município ao distrito — {uf}
@@ -60,7 +60,7 @@ export default function Distritos() {
         </div>
       </div>
 
-      <div className="grid" style={{ gridTemplateColumns: "1.4fr 1fr" }}>
+      <div className="grid c2w">
         <div className="card">
           <h3>Distritos — população, desvio, municípios, compacidade</h3>
           <div className="scroll">

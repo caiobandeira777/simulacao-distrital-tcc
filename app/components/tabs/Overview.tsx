@@ -26,14 +26,14 @@ export default function Overview() {
         </p>
       </div>
 
-      <div className="grid" style={{ gridTemplateColumns: "repeat(4,1fr)" }}>
+      <div className="grid c4">
         <div className="kpi hl"><div className="lab">Municípios agrupados</div><div className="val">{META.total_municipios_soma}</div><div className="lab" style={{ marginTop: 4 }}>MS 79 · SC 295 · GO 246</div></div>
         <div className="kpi hl"><div className="lab">Distritos desenhados</div><div className="val">{META.total_distritos}</div><div className="lab" style={{ marginTop: 4 }}>MS 4 · SC 8 · GO 8</div></div>
         <div className="kpi"><div className="lab">Cadeiras (base) → com overhang</div><div className="val">{baseTotal} <small>→ {finalC1}</small></div><div className="lab" style={{ marginTop: 4 }}>cenário 1 · +{META.overhang_total.c1} overhang</div></div>
         <div className="kpi"><div className="lab">Fidelidade ao real (cenário 2)</div><div className="val">{UFS.reduce((a, u) => a + META.fidelidade[u].c2, 0)}<small>/{baseTotal}</small></div><div className="lab" style={{ marginTop: 4 }}>eleitos reais que permanecem</div></div>
       </div>
 
-      <div className="grid" style={{ gridTemplateColumns: "1.15fr 1fr" }}>
+      <div className="grid c2w">
         <div className="card">
           <h3>Os 3 estados <span className="muted" style={{ textTransform: "none" }}>distritos desenhados</span></h3>
           <MiniMap />
